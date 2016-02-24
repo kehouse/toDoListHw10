@@ -1,0 +1,47 @@
+section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+header {
+  margin-left: 39%;
+}
+
+.textBox {
+  margin-left: 30%;
+}
+
+.text {
+  width: 47%;
+}
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  margin-left: 15%;
+  padding: 0;
+}
+
+.buttons {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15%;
+}
+
+.delete {
+  margin-left: 18%;
+}
+
+.toDoContainer {
+  list-style-type: none;
+  border: 1px solid grey;
+  width: 33.3%;
+  margin-left: 30%;
+  margin-top: 1%;
+}
+
+footer {
+  margin-top: 2%;
+}
