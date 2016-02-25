@@ -3,9 +3,9 @@
  // Getting the information the user is putting in
 
  function getListFromDom(){
-   var name = $('input[name="toDoList"]').val();
+   var post = $('input[name="toDoList"]').val();
    return {
-     name: name,
+     post: post
    }
  }
 
@@ -18,7 +18,7 @@
  }
 
  function addListToDom(newList, templateStr, $target){
-   var tmpl = _.template(templatesStr);
+   var tmpl = _.template(templateStr);
    $target.append(tmpl(newList));
  }
 
@@ -30,42 +30,29 @@
    });
  }
 
+ function deleteList(idx){
+   toDoList.splice(idx, 1);
+ }
+
  $(document).ready(function(){
    addAllLists(toDoList);
 
+// this is to print out user info on page after clicking submit button
+
 $('.submitButton').on('click', function(event){
   event.preventDefault();
-  var newListSubmit = getListFromDom();
+  var newList = getListFromDom();
     addList(newList);
+    addAllLists(getLists());
+    $('input[name="toDoList"]').val('');
 });
 
- });
+// to use the delete button and delete a list item
 
-//
-// function deletePost(idx){
-//   toDoList.splice(idx, 1);
-// }
-//
-// function editPost(idx){
-//   //fill in
-// }
-//
-//
-// $(document).ready(function(){
-//   addAllPosts(toDoList);
-//
-//   $('form').on('submit', function(event){
-//     event.preventDefault();
-//     var newPost = getPostFromDom();
-//     console.log(newPost);
-//     addPost(newPost);
-//     addAllPosts(getPosts());
-//     $('input').val('');
-//   });
-//
-//   $('section').on('click', '.delete-post', function(event){
-//     var idx = $(this).closest('article').data('idx');
-//     deletePost(idx);
-//     addAllPosts(getPosts());
-//   });
-// });
+$('.toDoContainer').on('click', '.delete-post', function(event){
+  var idx = $(this).closest('div').data('idx');
+  deleteList(idx);
+  addAllLists(getLists());
+})
+
+ });
