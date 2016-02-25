@@ -3,22 +3,30 @@ body {
 }
 
 section {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   padding: 0;
-  background-color: white;
+  background-color: #CECECE;
 }
 
 header {
-  margin-left: 39%;
+  margin-left: 36%;
+}
+
+h1 {
+  font-size: 70px;
+  font-family: inherit;
+  font-weight: 100;
+  margin: 0 auto;
 }
 
 .textBox {
-  margin-left: 30%;
+  margin-left: 16%;
 }
 
 .text {
-  width: 47%;
+  width: 80%;
+  height: 45px;
 }
 
 p {
@@ -32,21 +40,40 @@ p {
 .buttons {
   display: inline-block;
   vertical-align: top;
-  margin-left: 15%;
+  margin-left: 7%;
 }
 
 .delete {
-  margin-left: 18%;
+  margin-left: 1%;
+}
+
+.delete-post {
+  position: absolute;
+  margin-left: 38%;
+  margin-top: -3%;
 }
 
 .toDoContainer {
   list-style-type: none;
-  border: 1px solid grey;
-  width: 33.3%;
-  margin-left: 30%;
+  width: 43%;
+  margin-left: 9.7%;
+}
+
+.toDoContainer p {
+  width: 157.5%;
+  height: 45px;
+  background-color: white;
   margin-top: 1%;
 }
 
 footer {
-  margin-top: 2%;
+  margin-top: 1%;
+}
+
+footer p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  margin-left: 18%;
+  padding: 0;
 }
